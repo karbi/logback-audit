@@ -13,7 +13,6 @@
  
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>ch.qos.logback</groupId>
   <artifactId>audit-common</artifactId>
   <packaging>jar</packaging>
   <name>Logback Audit Common</name>

@@ -58,7 +58,6 @@ public class AuditEventDAO extends Persistor {
   // subject) AS grp
   // ORDER BY grp.subject_count DESC;
 
-  @SuppressWarnings("unchecked")
   static public List<Object[]> findMaxSubject() throws HibernateException {
     Session s = null;
     try {
