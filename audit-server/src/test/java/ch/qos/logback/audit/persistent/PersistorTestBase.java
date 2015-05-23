@@ -21,8 +21,8 @@ import junit.framework.TestCase;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
 import org.hibernate.dialect.HSQLDialect;
-import org.hsqldb.Server;
-import org.hsqldb.ServerConstants;
+import org.hsqldb.server.Server;
+import org.hsqldb.server.ServerConstants;
 
 import ch.qos.logback.audit.server.TableCreator;
 

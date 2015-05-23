@@ -18,7 +18,9 @@ import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
+import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.service.ServiceRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -103,7 +105,9 @@ public class Persistor {
     if (cfg == null) {
       throw new IllegalStateException("Configuration must be set before usage.");
     }
-    return cfg.buildSessionFactory();
+    
+    final ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder().applySettings(cfg.getProperties()).build();
+    return cfg.buildSessionFactory(serviceRegistry);
   }
 
   /**
