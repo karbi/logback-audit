@@ -53,7 +53,7 @@ public class AuditorImpl  {
     return aai.isAttached(appender);
   }
 
-  public Iterator iteratorForAppenders() {
+  public Iterator<Appender<AuditEvent>> iteratorForAppenders() {
     return aai.iteratorForAppenders();
   }
 
